@@ -1,0 +1,46 @@
+:host {
+    display: block;
+}
+.splash-container
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #32EEEC;
+    background: -webkit-linear-gradient(top left, #32EEEC, #103B80);
+    background: -moz-linear-gradient(top left, #32EEEC, #103B80);
+    background: linear-gradient(to bottom right, #32EEEC, #103B80);
+    height: 100%;
+
+    .logo-container
+    {
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        
+        img{
+            margin: 0 auto;
+            filter: brightness(0) invert(1);
+            width: 100%;
+            height: auto;
+            max-width: 140px;
+        }
+        button {
+            cursor: pointer;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            padding: 10px 40px;
+            border-radius: 50px;
+            border:none;
+            align-self: normal;
+        }
+    }
+}
