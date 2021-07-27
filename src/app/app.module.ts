@@ -7,12 +7,16 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SplashComponent } from './splash/splash.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DevisionsHeaderComponent } from './components/devisions-header/devisions-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    SplashComponent
+    SplashComponent,
+    DashboardComponent,
+    DevisionsHeaderComponent
   ],
   imports: [
     BrowserModule,
