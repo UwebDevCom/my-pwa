@@ -16,13 +16,12 @@
             margin: 0;
             margin-top: 20px;
             margin-bottom: 10px;
-        
         }
         .time-switcher-container {
             align-self: flex-end;
             form {
                 display: flex;
-                >label{
+                > label {
                     padding: 10px;
                 }
             }
@@ -48,18 +47,30 @@
                     left: -2px;
                     bottom: -10px;
                 }
-                input:checked ~ .checkmark
-                    {
-                        width: 100%;
-                        background-color: var(--lightGray);
-                        height: 2px;
-                        border: 10px;
-                    }
-                
+                input:checked ~ .checkmark {
+                    width: 100%;
+                    background-color: var(--lightGray);
+                    height: 2px;
+                    border: 10px;
+                }
             }
         }
     }
 }
 
-
-
+.footer-section {
+    display: block;
+    padding: 30px 20px;
+    background-color: var(--mainBlue);
+    text-align: center;
+    button.paginator {
+        border: none;
+        padding: 3px;
+        border-radius: 50%;
+        margin: 6px;
+        background-color: var(--mainBlueDark);
+        &.active-paginator {
+            background-color: var(--primaryColor);
+        }
+    }
+}

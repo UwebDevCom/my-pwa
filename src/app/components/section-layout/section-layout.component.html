@@ -13,9 +13,9 @@
         </div>
     </div>
     <div class="body-section">
-        <p>sdfadsfsadf</p>
+        <div echarts [options]="options" class="demo-chart"></div>
     </div>
     <div class="footer-section">
-        <p>sdfadsfk dhasfk</p>
+        <button *ngFor="let paginator of paginators; let index=index" class="paginator" [ngClass]="{'active-paginator': index === paginatorIndex}" (click)="paginatorFun(index)"></button>
     </div>
 </div>

@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DevisionsHeaderComponent } from './components/devisions-header/devisions-header.component';
 import { SectionLayoutComponent } from './components/section-layout/section-layout.component';
 import { StocksPanelComponent } from './components/stocks-panel/stocks-panel.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,9 @@ import { StocksPanelComponent } from './components/stocks-panel/stocks-panel.com
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxEchartsModule.forRoot({
+      echarts: ()=>import('echarts')
+    }),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
