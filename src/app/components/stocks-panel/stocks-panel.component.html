@@ -1,0 +1,20 @@
+    <ul class="stocks-container">
+        <li *ngFor="let stock of stocksData" class="stock-container" [ngClass]="{'down-guesture' : stock.dayChange  <0,'
+        up-guesture' : stock.dayChange > 0}">
+            <div class="stocks-info">
+                <div class="exchange-container">
+                    <span *ngIf="stock.exchange">{{stock.exchange}}:</span>
+                <span>{{stock.stock}}</span>
+                </div>
+               <div>
+                <span class="stock-container">{{stock.rate}}</span>
+               </div>
+               <div class="change-stock-container">
+                <span class="mark-rate" [ngClass]="{'down-guesture' : stock.dayChange < 0,'up-guesture' : stock.dayChange > 0}">
+                {{stock.dayChange}}%    
+                </span>
+               </div>
+                <span class="stock-time">{{stock.time}}</span>
+            </div>
+        </li>
+    </ul>

@@ -1,0 +1,21 @@
+<div class="graph-section-container">
+    <div class="header-section">
+        <h2>Sales</h2>
+        <div class="time-switcher-container">
+            <form>
+
+                <label *ngFor="let tab of timeTabs" class="radio-container">
+                    <span>{{tab}}</span>
+                    <input (change)="toggleUi()" type="radio" name="timesteps" [value]="tab" [(ngModel)]="toggleValue" />
+                    <span [ngClass]="{'toggle-active' : toggleValue === 'table'}" class="checkmark input-table"></span>
+                  </label>
+            </form>
+        </div>
+    </div>
+    <div class="body-section">
+        <p>sdfadsfsadf</p>
+    </div>
+    <div class="footer-section">
+        <p>sdfadsfk dhasfk</p>
+    </div>
+</div>

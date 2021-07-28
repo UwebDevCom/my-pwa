@@ -4,7 +4,7 @@
 }
 
 header {
-  background-color: #01446a;
+  background-color: var(--mainBlue);
   nav {
     text-align: center;
     ul {
@@ -14,7 +14,7 @@ header {
       list-style: none;
       padding: 10px;
       border-radius: 50px;
-      background-color: #002136;
+      background-color: var(--mainBlueDark);
       border: 2px solid #244a63;
       box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
       li {
@@ -27,21 +27,26 @@ header {
           color: #fff;
           background-color: transparent;
           border: none;
+          font-family: 'InterRegular';
+          &.active-devision
+          {
+            color: var(--mainBlueDark);
+            font-weight: bold;
+          }
         }
       }
       .active-guesture {
-          transition: all .2s;
+        transition: all .2s;
         position: absolute;
         z-index: -1;
         width: 48px;
         height: 44px;
         transform: translateY(-50%);
         top: 50%;
-        background-color: darkturquoise;
+        background: var(--primaryGradient);
         box-shadow: -10px 10px 10px rgba(21, 195, 218, 0.4);
         left: 12px;
         border-radius: 50px;
-
       }
     }
   }

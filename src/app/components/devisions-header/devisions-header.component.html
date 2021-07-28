@@ -1,7 +1,7 @@
 <header>
     <nav>
         <ul #ul>
-            <li *ngFor="let devision of devisions"><button (click)="changeStyle($event,ul)">{{devision}}</button></li>
+            <li *ngFor="let devision of devisions; let index = index"><button [ngClass]="{'active-devision' : index === activeDevision}" (click)="changeStyle($event,index)">{{devision}}</button></li>
             <div [ngStyle]="activeStyle" class="active-guesture"></div>
         </ul>
     </nav>

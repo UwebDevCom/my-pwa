@@ -6,3 +6,19 @@ body {
     padding: 0;
     margin: 0;
 }
+
+
+:root {
+    --mainBlue: #024266;
+    --mainBlueDark: #002949;
+    --white: #ffffff;
+    --lightGray: #D1DCDD;
+    --redMainColor : #FF6F74;
+    --primaryColor : #00B8D8;
+    --primaryGradient :  linear-gradient(135deg, #5EE6E5 0%, #00BAD8 53.4%, #00B5D4 100%);
+  }
+
+
+  body {
+      font-family: 'InterRegular';
+  }

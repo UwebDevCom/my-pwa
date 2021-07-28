@@ -1,0 +1,152 @@
+//static
+divisions: [] = [
+    {
+        name: "ICL",
+        id : "12345"
+    },
+    {
+        ...
+    }
+] //hardcoded??
+
+
+
+
+//data
+
+
+
+
+stock[]: [
+    {
+        name: String
+        price: Number/String //if number needs to be truncated (2.45245 -> 2.45) data should come as number.
+        trendIsInscreasing: Boolean,
+        trendAmountInPercent : number/string
+        lastUpdate : Date
+    }
+] 
+
+
+// 
+
+//need to adress 
+GraphGeneric {   
+    title:  String
+    filters: {
+        month : {
+            slides : [
+                {
+                    title : string,
+                    dataGraph : [
+                        {year: number ,data: {
+                        timestamp: Date , value: number
+                        }}
+                    ]
+                },
+                {
+                    ...
+                }
+            ]
+        },  
+        qtd : {
+            ...
+        },
+        ytd: {
+            ...
+        }
+    },
+    ruler? : [
+        {title: string, value: number}
+    ]
+} 
+
+
+GraphHorizontalGeneric {
+    title:  String
+    filters: {
+        month : {
+            slides : [
+                {
+                    title : string,
+                    dataGraph : [
+                        {name: string,
+                        year: number,
+                        qt: number,
+                        price: number
+                        data: {
+                            timestamp: Date , value: number
+                            }
+                        },
+                    ]
+                },
+                {
+                    ...
+                }
+            ]
+        },
+        qtd : {
+            ...
+        },
+        ytd: {
+            ...
+        }
+}
+
+
+GraphGlobeGeneric {
+    title:  String
+    filters: {
+        month : {
+            
+                title : string,
+                dataGraph : [
+                    {
+                    name: string,
+                    data: {
+                        timestamp: Date , value: number, country: string
+                        }
+                    },
+                ]
+        },
+        qtd : {
+            ...
+        },
+        ytd: {
+            ...
+        }
+}
+
+
+
+
+
+GraphBarsLineGeneric {
+  title:  String
+    filters: {
+        month : {
+            
+                title : string,
+                graphs:[
+                [
+                    {
+                    name: string,
+                    data: {
+                        timestamp: Date , value: number
+                        }
+                    },
+                ], 
+                [
+                    ...
+                ]
+                ]
+                
+        },
+        qtd : {
+            ...
+        },
+        ytd: {
+            ...
+        }
+}
+}

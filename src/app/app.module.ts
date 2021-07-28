@@ -9,6 +9,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DevisionsHeaderComponent } from './components/devisions-header/devisions-header.component';
+import { SectionLayoutComponent } from './components/section-layout/section-layout.component';
+import { StocksPanelComponent } from './components/stocks-panel/stocks-panel.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { DevisionsHeaderComponent } from './components/devisions-header/devision
     PageNotFoundComponent,
     SplashComponent,
     DashboardComponent,
-    DevisionsHeaderComponent
+    DevisionsHeaderComponent,
+    SectionLayoutComponent,
+    StocksPanelComponent
   ],
   imports: [
     BrowserModule,

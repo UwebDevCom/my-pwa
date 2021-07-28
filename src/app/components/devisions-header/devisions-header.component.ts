@@ -7,7 +7,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class DevisionsHeaderComponent implements OnInit {
 
-  
+  public activeDevision: number = 0;
   public devisions: string[] = ['ICL', 'IP', 'POTASH', 'PS', 'SF'];
   public activeStyle: any;
    
@@ -20,8 +20,8 @@ export class DevisionsHeaderComponent implements OnInit {
     
   }
   
-  public changeStyle(e): void {
-    console.log(this.someInput.nativeElement.offsetLeft , e.target.offsetLeft )
+  public changeStyle(e :any,index: number): void {
+    this.activeDevision = index;
     this.activeStyle = {
       left: ( e.target.offsetLeft) + 'px',
       width: e.target.offsetWidth + 'px',

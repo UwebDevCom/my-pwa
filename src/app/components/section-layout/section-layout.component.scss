@@ -1,0 +1,65 @@
+:host {
+    display: block;
+}
+
+.graph-section-container {
+    .header-section {
+        display: block;
+        padding: 10px;
+        background-color: var(--mainBlue);
+        display: flex;
+        justify-content: space-between;
+        h2 {
+            color: var(--lightGray);
+            font-family: "InterLight";
+            font-weight: 100;
+            margin: 0;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        
+        }
+        .time-switcher-container {
+            align-self: flex-end;
+            form {
+                display: flex;
+                >label{
+                    padding: 10px;
+                }
+            }
+            .radio-container {
+                display: block;
+                position: relative;
+                margin-right: 6px;
+                cursor: pointer;
+                font-size: 12px;
+                font-weight: 100;
+                color: var(--lightGray);
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+                .checkmark {
+                    position: absolute;
+                    left: -2px;
+                    bottom: -10px;
+                }
+                input:checked ~ .checkmark
+                    {
+                        width: 100%;
+                        background-color: var(--lightGray);
+                        height: 2px;
+                        border: 10px;
+                    }
+                
+            }
+        }
+    }
+}
+
+
+

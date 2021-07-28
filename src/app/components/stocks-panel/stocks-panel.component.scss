@@ -1,0 +1,94 @@
+:host {
+    display: block;
+}
+
+ul.stocks-container {
+    overflow: auto;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+        flex: 1;
+        min-width: 150px;
+        max-width: 300px;
+        display: inline-block;
+        color: #fff;
+        padding: 10px 20px;
+        .stocks-info {
+            display: inline-block;
+            font-family: "InterThin";
+            font-size: 14px;
+            color: var(--lightGray);
+            .exchange-container {
+                span {
+                    display: inline-block;
+                    padding-bottom: 6px;
+                }
+            }
+            .stock-container {
+                font-size: 18px;
+                padding: 4px 0;
+            }
+            .change-stock-container {
+                .mark-rate {
+                    font-size: 12px;
+
+                    &.up-guesture {
+                        color: var(--primaryColor);
+                        font-family: 'InterLight';
+                        &::before {
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                            border-top: 5px solid var(--primaryColor);
+                            display: inline-block;
+                            
+                        }
+                    }
+                    &.down-guesture {
+                        color: var(--redMainColor);
+                        font-family: 'InterLight';
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 0;
+                            height: 0;
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                            border-bottom: 5px solid var(--redMainColor);
+                        }
+                    }
+                }
+            }
+            .stock-time {
+                font-size: 12px;
+                padding-top: 10px;
+            }
+        }
+        &.up-guesture {
+            &::before {
+                content: "";
+                width: 4px;
+                display: inline-block;
+                height: 72px;
+                margin: 0 10px;
+                border-radius: 50px;
+                background-color: var(--primaryColor);
+            }
+        }
+        &.down-guesture {
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 4px;
+                height: 72px;
+                margin: 0 10px;
+                border-radius: 50px;
+                background-color: var(--redMainColor);
+            }
+        }
+    }
+}
