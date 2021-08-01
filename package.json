@@ -23,9 +23,12 @@
     "@angular/router": "~10.2.0",
     "@angular/service-worker": "~10.2.0",
     "echarts": "^5.1.2",
+    "jquery": "^3.6.0",
     "ngx-echarts": "^7.0.1",
+    "ngx-slick-carousel": "^0.5.1",
     "node-sass": "^4.14.1",
     "rxjs": "~6.6.0",
+    "slick-carousel": "^1.8.1",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

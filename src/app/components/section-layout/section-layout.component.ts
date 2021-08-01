@@ -12,60 +12,38 @@ export class SectionLayoutComponent implements OnInit {
   public paginators : string[] = ['1','2','3'];
   public paginatorIndex : number = 0;
   options: any;
-
+  slideConfig = {"slidesToShow": 1,
+    "slidesToScroll": 1,
+    "dots": true,
+    customPaging : function(slider, i) {
+        return `<button class="paginator" [ngClass]="{'active-paginator': ${i} === paginatorIndex}" (click)="paginatorFun(${i})"></button>`;
+    },
+  };
+  
   constructor() { }
 
   ngOnInit(): void {
-    const xAxisData = [];
-    const data1 = [];
-    const data2 = [];
-
-    for (let i = 0; i < 100; i++) {
-      xAxisData.push('category' + i);
-      data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
-      data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
-    }
-
-
-    this.options = {
-      legend: {
-        data: ['bar', 'bar2'],
-        align: 'left',
-      },
-      tooltip: {},
-      xAxis: {
-        data: xAxisData,
-        silent: false,
-        splitLine: {
-          show: false,
-        },
-      },
-      yAxis: {},
-      series: [
-        {
-          name: 'bar',
-          type: 'bar',
-          data: data1,
-          animationDelay: (idx) => idx * 10,
-        },
-        {
-          name: 'bar2',
-          type: 'bar',
-          data: data2,
-          animationDelay: (idx) => idx * 10 + 100,
-        },
-      ],
-      animationEasing: 'elasticOut',
-      animationDelayUpdate: (idx) => idx * 5,
-    };
+ this.options = {
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+      type: 'value',
+      position: 'right'
+    },
+    series: [{
+        data: [120, 200, 150, 80, 70, 110, 130],
+        type: 'bar'
+    }],
+   grid: 
+     {borderColor: '#ff00cf'}
+};
   }
-
   public toggleUi(): void {
-
   } 
 
   public paginatorFun(index: number): void{
     this.paginatorIndex = index;
   }
-
 }

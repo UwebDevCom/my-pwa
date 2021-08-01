@@ -12,6 +12,8 @@ import { DevisionsHeaderComponent } from './components/devisions-header/devision
 import { SectionLayoutComponent } from './components/section-layout/section-layout.component';
 import { StocksPanelComponent } from './components/stocks-panel/stocks-panel.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SlickCarouselModule,
     NgxEchartsModule.forRoot({
       echarts: ()=>import('echarts')
     }),

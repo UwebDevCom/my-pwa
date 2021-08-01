@@ -13,9 +13,14 @@
         </div>
     </div>
     <div class="body-section">
+    
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem class="slider">
         <div echarts [options]="options" class="demo-chart"></div>
+        </div>
+    </ngx-slick-carousel>
     </div>
-    <div class="footer-section">
+    <!-- <div class="footer-section">
         <button *ngFor="let paginator of paginators; let index=index" class="paginator" [ngClass]="{'active-paginator': index === paginatorIndex}" (click)="paginatorFun(index)"></button>
-    </div>
+    </div> -->
 </div>

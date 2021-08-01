@@ -22,3 +22,29 @@ body {
   body {
       font-family: 'InterRegular';
   }
+
+  .slick-dots
+  {
+      position: static !important;
+      padding: 30px !important;
+      background-color: var(--mainBlue);
+
+      .slick-active button
+      {
+            background-color: var(--primaryColor);
+      }
+  }
+  .slick-dots li button
+  {
+      border: none;
+      padding: 3px !important;
+      border-radius: 50%;
+      margin: 6px;
+      background-color: var(--mainBlueDark);
+      width: 0 !important;
+      height: 0 !important;
+        &::before
+        {
+            content: none !important;
+        }
+  }
