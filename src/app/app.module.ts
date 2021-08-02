@@ -13,6 +13,7 @@ import { SectionLayoutComponent } from './components/section-layout/section-layo
 import { StocksPanelComponent } from './components/stocks-panel/stocks-panel.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { BarGraphRtbaComponent } from './components/bar-graph-rtba/bar-graph-rtba.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     DashboardComponent,
     DevisionsHeaderComponent,
     SectionLayoutComponent,
-    StocksPanelComponent
+    StocksPanelComponent,
+    BarGraphRtbaComponent
   ],
   imports: [
     BrowserModule,

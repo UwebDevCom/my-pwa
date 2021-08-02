@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import GraphData from 'src/app/model/data.MODEL';
 
 @Component({
   selector: 'app-section-layout',
@@ -11,6 +12,13 @@ export class SectionLayoutComponent implements OnInit {
   public toggleValue: string;
   public paginators : string[] = ['1','2','3'];
   public paginatorIndex : number = 0;
+  
+  @Input()
+  itemTemplate !: TemplateRef<any>;
+
+  @Input()
+  containerData !: GraphData;
+  
   options: any;
   slideConfig = {"slidesToShow": 1,
     "slidesToScroll": 1,
@@ -23,22 +31,6 @@ export class SectionLayoutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
- this.options = {
-    xAxis: {
-        type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    },
-    yAxis: {
-      type: 'value',
-      position: 'right'
-    },
-    series: [{
-        data: [120, 200, 150, 80, 70, 110, 130],
-        type: 'bar'
-    }],
-   grid: 
-     {borderColor: '#ff00cf'}
-};
   }
   public toggleUi(): void {
   } 

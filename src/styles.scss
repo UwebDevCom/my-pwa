@@ -31,7 +31,7 @@ body {
 
       .slick-active button
       {
-            background-color: var(--primaryColor);
+            background-color: var(--primaryColor) !important;
       }
   }
   .slick-dots li button
@@ -40,7 +40,7 @@ body {
       padding: 3px !important;
       border-radius: 50%;
       margin: 6px;
-      background-color: var(--mainBlueDark);
+      background-color: var(--mainBlueDark) !important;
       width: 0 !important;
       height: 0 !important;
         &::before

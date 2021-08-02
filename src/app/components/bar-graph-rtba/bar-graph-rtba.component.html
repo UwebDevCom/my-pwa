@@ -1,0 +1,8 @@
+
+<app-section-layout [itemTemplate]="salesGraph"  [containerData]="data"></app-section-layout>
+
+<ng-template #salesGraph let-data>
+        <div echarts [options]="data.options" class="demo-chart"></div>
+</ng-template>
+
+
